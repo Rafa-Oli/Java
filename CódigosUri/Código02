@@ -1,0 +1,22 @@
+import java.util.Scanner;
+//calculo bhascara
+public class Uri1 {
+	public static void main(String args[]) {
+		Scanner ler = new Scanner(System.in);
+		double a = ler.nextDouble();double b = ler.nextDouble();double c = ler.nextDouble();
+		double equacao=Math.sqrt((b*b)-4*a*c);
+		if(equacao>0 && a>0 && c>0) {
+		double R1= (-b+equacao)/(2*a);
+		double R2= (-b-equacao)/(2*a);
+		System.out.printf("R1 = %.5f\n",R1);
+		System.out.printf("R2 = %.5f\n",R2);	
+		}
+		else {
+			System.out.println("Impossivel calcular");
+		}
+	  
+	
+		
+		
+	}
+}
