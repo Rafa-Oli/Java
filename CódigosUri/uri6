@@ -1,0 +1,8 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner ler= new Scanner(System.in);
+    int km= ler.nextInt();
+    System.out.println(km*2 + " minutos");
+  }
+}
