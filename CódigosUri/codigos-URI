@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+  Scanner ler= new Scanner(System.in);
+  double salario=ler.nextDouble();
+    
+   if(0 < salario && salario <= 400.00) {
+	   double salarioAumento= salario*1.15;
+	   double salarioDiferenca= salarioAumento-salario;
+	   System.out.printf("Novo salario: %.2f\n",salarioAumento);
+	   System.out.printf("Reajuste ganho: %.2f\n",salarioDiferenca);
+	   System.out.print("Em percentual: 15 %\n");
+	   
+   }
+   if(400.01<= salario && salario <=800.00){
+     double salarioAumento= salario*1.12;
+	   double salarioDiferenca= salarioAumento-salario;
+	   System.out.printf("Novo salario: %.2f\n",salarioAumento);
+	   System.out.printf("Reajuste ganho: %.2f\n",salarioDiferenca);
+	   System.out.print("Em percentual: 12 %\n");
+	   
+
+
+   }
+
+  if(800.01<=salario && salario<=1200.00){
+     double salarioAumento= salario*1.10;
+	   double salarioDiferenca= salarioAumento-salario;
+	   System.out.printf("Novo salario: %.2f\n",salarioAumento);
+	   System.out.printf("Reajuste ganho: %.2f\n",salarioDiferenca);
+	   System.out.print("Em percentual: 10 %\n");
+
+  }
+  if(1200.01<=salario && salario<=2000.00){
+     double salarioAumento= salario*1.07;
+	   double salarioDiferenca= salarioAumento-salario;
+	   System.out.printf("Novo salario: %.2f\n",salarioAumento);
+	   System.out.printf("Reajuste ganho: %.2f\n",salarioDiferenca);
+	   System.out.print("Em percentual: 7 %\n");
+
+  }
+  if(salario>2000.00){
+   double salarioAumento= salario*1.04;
+	   double salarioDiferenca= salarioAumento-salario;
+	   System.out.printf("Novo salario: %.2f\n",salarioAumento);
+	   System.out.printf("Reajuste ganho: %.2f\n",salarioDiferenca);
+	   System.out.print("Em percentual: 4 %\n");
+
+
+  }
+
+  }
+}
