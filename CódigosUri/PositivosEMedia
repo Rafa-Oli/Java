@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   int contador=0;
+   double soma=0;
+      Scanner ler= new Scanner(System.in);
+   
+   double num1= ler.nextDouble();
+   double num2= ler.nextDouble();
+   double num3= ler.nextDouble();
+   double num4= ler.nextDouble();
+   double num5= ler.nextDouble();
+   double num6= ler.nextDouble();
+   
+   if(num1>0){
+    contador++;
+    soma= num1+soma;
+
+   }
+if(num2>0){
+    contador++;
+    soma= num2+soma;
+
+   }
+if(num3>0){
+    contador++;
+    soma= num3+soma;
+
+   }
+if(num4>0){
+    contador++;
+    soma= num4+soma;
+
+   }
+   if(num5>0){
+    contador++;
+    soma= num5+soma;
+
+   }
+   if(num6>0){
+    contador++;
+    soma= num6+soma;
+
+   }
+    System.out.printf("%d valores positivos\n", contador);
+    System.out.printf("%.1f\n",soma/contador);
+  }
+}
