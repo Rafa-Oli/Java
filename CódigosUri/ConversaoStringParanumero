@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class DesafioC {
+public static void main(String[] args) {
+	
+
+	Scanner entrada= new Scanner(System.in);
+	//replace= substitui a virgula pelo ponto
+	String string1= entrada.next().replace(",", ".");
+	String string2= entrada.next().replace(",", ".");
+	String string3= entrada.next().replace(",", ".");
+	
+	
+	Double salario1= Double.parseDouble(string1);
+	Double salario2= Double.parseDouble(string2);
+	Double salario3= Double.parseDouble(string3);
+	
+    double media= (salario1+salario2+salario3)/3;
+	System.out.print(media);
+	entrada.close();
+}
+}
