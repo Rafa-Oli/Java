@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import javax.swing.JOptionPane;
 
 public class CS {
@@ -11,11 +14,12 @@ public class CS {
 	Double peso= Double.parseDouble(numero1);
 	Double altura= Double.parseDouble(numero2);
 	
-	double imc = peso/(Math.pow(altura, 2));
+	Double imc = peso/(Math.pow(altura, 2));
+	//determinando precisao de 3 casas, com arredondamento para cima
+	Double imcT= BigDecimal.valueOf(imc).setScale(3, RoundingMode.HALF_UP).doubleValue();
 	
-	
-	
-	JOptionPane.showMessageDialog(null, " " + nome + " seu IMC é " + imc);	
-//	System.out.println 
+
+	JOptionPane.showMessageDialog(null, " " + nome + " seu IMC é " + imcT);	
+
 }
 }
