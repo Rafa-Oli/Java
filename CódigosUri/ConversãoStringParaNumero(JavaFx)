@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+public class CS {
+ public static void main(String[] args) {
+	
+	// apenas classe String 
+	String nome= JOptionPane.showInputDialog("Digite seu nome: ");
+	String numero1= JOptionPane.showInputDialog("Digite seu peso: " );
+	String numero2= JOptionPane.showInputDialog("Digite sua altura: ");
+	
+	Double peso= Double.parseDouble(numero1);
+	Double altura= Double.parseDouble(numero2);
+	
+	double imc = peso/(Math.pow(altura, 2));
+	
+	
+	
+	JOptionPane.showMessageDialog(null, " " + nome + " seu IMC é " + imc);	
+//	System.out.println 
+}
+}
