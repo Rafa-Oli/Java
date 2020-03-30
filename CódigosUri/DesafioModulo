@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class DesafioModulo {
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+
+		double num1 = entrada.nextDouble();
+		double num2 = entrada.nextDouble();
+		String operador = entrada.next();
+		// se for igual os operadores , deve-se realizar a operacao, ou é equivalente a
+		// 0
+		double result = "+".equals(operador) ? num1 + num2 : 0;
+		result = "-".equals(operador) ? num1 - num2 : result;
+		result = "*".equals(operador) ? num1 * num2 : result;
+		result = "/".equals(operador) ? num1 / num2 : result;
+		result = "%".equals(operador) ? num1 % num2 : result;
+
+		System.out.println(result);
+		entrada.close();
+	}
+}
