@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class DesafioWhile {
+	public static void main(String[] args) {
+
+	Scanner entrada= new Scanner(System.in);	
+		double nota=0;
+		double Total=0;
+	    int notasValidas=0;
+	
+	    
+	while(nota != -1) {
+		System.out.println("Para sair digite -1".toUpperCase());
+		System.out.println("Digite uma nota: ");
+		nota=entrada.nextDouble();
+		if(nota>=0 && nota<=10) {
+			System.out.println("Nota Válida");
+			Total+=nota;
+			notasValidas++;
+		}
+		else if(nota!=-1) {
+			System.out.println("Digite uma nota válida");
+		}
+		
+		
+	}
+	
+	System.out.printf("A média da turma é: %.2f", Total/notasValidas);
+	
+	entrada.close();
+	}
+}
