@@ -1,0 +1,29 @@
+package DesafioForeach;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		double soma = 0.0;
+		double notaA;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Digite a quantidade de notas: ");
+		int num = entrada.nextInt();
+		double[] notas = new double[num];
+
+		for (int i = 0; i < notas.length; i++) {
+			System.out.printf("Digite a nota[%d]: ", i);
+			notaA = entrada.nextDouble();
+			notas[i] += notaA;
+		}
+
+		for (double nota : notas) {
+			soma += nota;
+
+		}
+
+		System.out.println("A média é: " + (soma / num));
+
+		entrada.close();
+	}
+}
