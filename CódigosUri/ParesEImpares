@@ -1,0 +1,57 @@
+//codigo onde o pares sao ordenados em ordem crescente, enquanto que numeros impares sao ordenados em ordem decrescentes
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+		int num = entrada.nextInt();
+
+		int[] numeros = new int[num];
+
+		ArrayList<Integer> numerosP = new ArrayList<Integer>();
+		ArrayList<Integer> numerosI = new ArrayList<Integer>();
+		for (int i = 0; i < numeros.length; i++) {
+			int numero = entrada.nextInt();
+			if (numero > 0) {
+
+				numeros[i] += numero;
+
+			} else {
+				break;
+			}
+
+		}
+		Arrays.sort(numeros);
+
+		for (int i = 0; i < numeros.length; i++) {
+			if (numeros[i] % 2 == 0) {
+				numerosP.add(numeros[i]);
+
+			} else {
+				numerosI.add(numeros[i]);
+			}
+
+		}
+
+		
+		for (Integer i : numerosP) {
+
+			System.out.println(i);
+		}
+// inverte a ordem do array list
+		Collections.reverse(numerosI);
+
+		for (Integer i : numerosI) {
+			System.out.println(i);
+
+		}
+
+		entrada.close();
+	}
+}
