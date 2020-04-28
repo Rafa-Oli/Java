@@ -1,0 +1,54 @@
+package DesafioLambdas;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.function.Function;
+import java.util.function.UnaryOperator;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		double imposto = 1.085;
+		Produto p = new Produto("iPad", 3235.89, 0.13);
+
+		Function<Produto, Double> valorComDesconto = num -> num.calculo();
+		Function<Double, Double> valorImpostos = num -> (num >= 2500) ? (num *= imposto) : num;
+		Function<Double, Double> Frete = num -> (num >= 3000) ? (num += 100) : (num += 50);
+		// formato qe fiz
+		Function<Double, Double> arredondar = num -> {
+			BigDecimal bd = new BigDecimal(num).setScale(2, RoundingMode.HALF_EVEN);
+			return bd.doubleValue();
+		};
+		// formato que leo fez
+		UnaryOperator<Double> arredondamento = preco -> Double.parseDouble(String.format("%.2f", preco));
+		// formato que fiz
+		Function<Double, String> formatar = num -> ("R$" + num).replace(".", ",");
+
+		System.out.println(
+				valorComDesconto.andThen(valorImpostos).andThen(Frete).andThen(arredondar).andThen(formatar).apply(p));
+
+	}
+  
+  package DesafioLambdas;
+
+public class Produto {
+
+	String nome;
+	double preco,valorTotal;
+	double desconto;
+	public Produto(String nome, double preco, double desconto) {
+		
+		this.nome = nome;
+		this.preco = preco;
+		this.desconto = desconto;
+	}
+	
+	double calculo() {
+	double descontoFinal = 1 - this.desconto;
+	valorTotal += this.preco * descontoFinal;
+	return valorTotal;	
+	}
+	
+}
+
+}
